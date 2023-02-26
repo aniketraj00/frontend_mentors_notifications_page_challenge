@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'PJS';
+    src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --blue-alpha: hsla(219, 85%, 26%, 0.1);
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue-100: hsl(210, 60%, 98%);
+    --grayish-blue-200: hsl(211, 68%, 94%);
+    --grayish-blue-300: hsl(205, 33%, 90%);
+    --grayish-blue-400: hsl(219, 14%, 63%);
+    --grayish-blue-500: hsl(219, 12%, 42%);
+    --dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PJS';
+    box-sizing: border-box;
+    color: var(--grayish-blue-500);
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--grayish-blue-100);
+}
+
+.container {
+    padding: 2rem 1rem
+}
+
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    padding-bottom: 0;
+    border-radius: 0.8rem;
+    box-shadow: 2px 6px 18px var(--blue-alpha);
+}
+
+.card_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.card_header > h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.notification_badge {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.35rem;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    font-weight: 800;
+}
+
+.card_header > p {
+    font-size: 0.9rem;
+}
+
+.list_item {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.active {
+    background-color: var(--grayish-blue-100);
+}
+
+.list_item > img {
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-right: 1rem;
+}
+
+.list_item--msg {
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--grayish-blue-300);
+    border-radius: 0.3rem;
+}
+
+.list_item--msg:hover {
+    background-color: var(--grayish-blue-200);
+    cursor: pointer;
+}
+
+.list_item > img:not(:first-child) {
+    margin-left: auto;
+}
+
+.list_item>img:not(:first-child):hover {
+    cursor: pointer;
+}
+
+.text-link {
+    cursor: pointer;
+}
+
+.text-lead {
+    font-weight: 800;
+}
+
+.text-link:hover {
+    color: var(--blue);
+}
+
+.text-blue {
+    color: var(--dark-blue);
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    color: var(--grayish-blue-400);
+}
+
+.dot_icon {
+    font-size: 0.5rem;
+}
+
+.dot_icon > i {
+    color: var(--red);
+}
+
+.mr-1 {
+    margin-right: 0.3rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.3rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.6rem;
+}
+
+.d-none {
+    display: none;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 1440px) {
+    .container {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 375px) {
+    
+    .container {
+        padding: 0;
+    }
+
+    .card {
+        border-radius: 0;
+    }
+}
